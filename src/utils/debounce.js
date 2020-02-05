@@ -7,7 +7,7 @@ export const debounce = (handler, evt) => {
     clearTimeout(lastTimeout);
   }
 
-  lastTimeout = setTimeout(function () {
+  lastTimeout = setTimeout(() => {
     handler(evt);
   }, DEBOUNCE_TIME);
 };

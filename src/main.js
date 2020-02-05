@@ -1,4 +1,5 @@
 import ProfileRatingComponent from "./components/profile-rating";
+import MoviesCountComponent from "./components/movies-count";
 import {checkForActiveState, setDocumentTitle} from "./utils/helpers";
 import {remove, render} from "./utils/render";
 import PageController from "./controllers/page";
@@ -24,6 +25,7 @@ window.addEventListener(`online`, () => {
 
 const mainContainer = document.querySelector(`.main`);
 const headerContainer = document.querySelector(`.header`);
+const footerContainer = document.querySelector(`.footer`);
 
 const moviesModel = new MoviesModel();
 
@@ -63,4 +65,7 @@ providerWithAPI.getMovies()
     ));
     remove(loadingComponent);
     page.render();
+    render(footerContainer, new MoviesCountComponent(
+        moviesModel.filmListDefault.length
+    ));
   });

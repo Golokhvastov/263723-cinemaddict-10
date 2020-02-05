@@ -99,7 +99,7 @@ export const isEscPressed = (evt) => {
 };
 
 export const isSubmitPressed = (evt) => {
-  return evt.ctrlKey && (evt.key === `Enter`);
+  return (evt.ctrlKey || evt.metaKey) && (evt.key === `Enter`);
 };
 
 export const getFilmsToLoadAmount = (renderedAmount) => {
