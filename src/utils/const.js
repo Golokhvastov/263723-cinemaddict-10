@@ -32,18 +32,23 @@ export const Styles = {
 
 export const userRanks = [
   {
-    title: `Novice`,
+    title: ``,
     min: 0,
-    max: 9
+    max: 0
+  },
+  {
+    title: `Novice`,
+    min: 1,
+    max: 10
   },
   {
     title: `Fan`,
-    min: 10,
-    max: 19
+    min: 11,
+    max: 20
   },
   {
     title: `Movie Buff`,
-    min: 20,
-    max: 30
+    min: 21,
+    max: Infinity
   }
 ];
